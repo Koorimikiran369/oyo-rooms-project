@@ -1,0 +1,779 @@
+DATA ANALYTICS PROJECT
+
+OBJECTIVE:
+
+Clientale: 
+	OYO ROOMS
+
+ Task In Hand:
+ 	Oyo rooms on the occassion of their aniversary wants to give away a new BEST IN THE LOCATION TAG for the hotels in every location.
+ 	They hired us to prepare a final list of these hotels.
+
+
+
+
+
+
+DATA CLEANING
+
+
+	- We can see that there are 14180 hotels in the list.
+	- We can also understand that number of ratings and summary is missing for every 'NEW' Hotel.
+
+	- We have replaced evey null value in the number of ratings by 0, to maintain the authenticity in the data.
+
+	- We can see that '₹' is causing a problem in the Original_price and Final_price to convert the data type from object to float
+	- Also '% off' will not let us convert the Offer from object to float.  
+	- 'km' in the Distance will not let us convert Distance into float
+	- 'NEW' in Rating will not lets us convert the data from object to float for better analyses.
+	- 'ratings' in Number of Rating will not let us convert the data from object to float.
+
+
+	- Now in the end we drop duplicates.
+
+
+
+
+DATA UNDERSTANDING
+
+
+
+
+
+CITY
+	- We can see from the above data that, Delhi has the maximum number of hotels compared to the rest.
+	- While Chennai has the least number of hotels.
+
+LOCATION
+	- There are 100 locations.
+	- Mahipalpur has the most number of hotels.
+
+SUMMARY
+	- It can be seen that the summary has been divided into 6.
+	- 4982 hotels from the data fall under 'Very Good'.
+	- While only 88 hotels are 'Fabulous'.
+
+ORIGINAL_PRICE
+	- Minimum Original_price for the data is Rs.602
+	- Maximum Original_price for the data is Rs.32452
+	- Mean value of Original_price is Rs.2895.7212
+	- Median value of Original_price is Rs.2299
+
+
+OFFER
+	- Minimum Offer for the data is 32%
+	- Maximum Offer for the data is 71%
+	- Mean value of Offer is 34.33%
+	- Median value of Offer is 32%
+
+FINAL_PRICE
+	- Minimum Final_price for the data is Rs.411
+	- Maximum Final_price for the data is Rs.20651
+	- Mean value of Final_price is Rs.1908.409698
+	- Median value of Final_price is Rs.1506
+
+DISTANCE
+	- Minimum Distance for the data is 0.0 km
+	- Maximum Distance for the data is 20 km
+	- Mean value of Distance is 6.155658 km
+	- Median value of Distance is 6.2 km
+
+RATING
+	- Minimum Rating for the data is 0
+	- Maximum Rating for the data is 5
+	- Mean value of Rating is 3.67
+	- Median value of Rating is 4
+
+NUMBER OF RATING
+	- Minimum Number of Rating for the data is 0 Ratings
+	- Maximum Number of Rating for the data is 6943 Ratings
+	- Mean value of Number of Rating is 588.801536 Ratings
+	- Median value of Number of Rating is 290 Ratings
+
+
+
+UNIVARIATE ANALYSIS
+
+
+	CITY
+		### Observation
+
+		- `Delhi` has the highest number of hotels
+		- `Mumbai` has the least number of hotels
+
+
+
+
+
+	LOCATION
+		### Observation
+
+		- `Mahipalpur` has the highest number of hotels
+
+
+
+
+	SUMMARY
+
+		### Observations
+
+		- Properties which are very good are maximum.
+		- Properties which are fabulous are least in number
+
+
+	
+	NUMBER OF RATING
+
+
+		### Observations
+
+		- Around 9000 properties have number of ratings in the range around 750 ratings.
+		- OYO Flagship 16092 Jageer Palace is the hotel with highest number of ratings in India.
+
+	RATING
+
+		### Observations
+
+		- 12.41% of the total properties are new or have 0 rating.
+		- 11.39% of the total properties have a rating of 4.1
+		- Only 6.93% of the total properties have a rating of 3.6
+
+	DISTANCE
+		### Observations
+
+		- More than 2750 properties are at a distance of 7.5km from their designated locations.
+
+		- OYO 2407 Hotel Gera's M1 and OYO 33489 Krishna Suites in Delhi are the hotels with least distances.
+
+
+
+
+	OFFER
+
+		### Observations
+
+		- Maximum number of properties have an offer of 32% off.
+
+		- OYO 9019 Golden Park in Delhi is the hotel which offers the maximum discount of 71%.
+
+
+
+
+
+	ORIGINAL_PRICE
+
+		### Observations
+
+		- Maximum number of price can be seen at 3000.
+		- Existance of outliers can be easily verified with the above graph.
+
+		- Palette - Prestige Golfshire Club is the most expensive hotel in India.
+		- SPOT ON 45777 Triplicane High Rd is the cheapest hotel.
+
+
+
+
+
+
+	FINAL_PRICE
+
+		### Observations
+
+		- Maximum number of properties can be seen having the final at around 2000.
+		- Existance of outliers can be easily verified from the above data.
+
+		- Palette - Prestige Golfshire Club is the most expensive hotel in India.
+		- SPOT ON 45777 Triplicane High Rd is the cheapest hotel.
+
+
+
+
+BIVARIATE ANALYSIS
+
+	CITY VS LOCATION
+
+		### Observations
+
+		- In Hyderabad, Jubilee Hills and Banjara Hills have the maximum number of hotels.
+		- In Hyderabad, Uppal, Rajiv Gandhi International Airport and Shamshabad have the least number of hotels.
+
+
+		### Observations
+
+		- In Bangalore, MG Road has the highest number of hotels.
+		- In Bangalore, Whitefield has the least number of hotels.
+
+
+	CITY VS SUMMARY
+
+			### Observation
+
+		- More than 1000 properties are very good in Hyderabad
+
+
+		### Observation
+
+		- More than 1200 properties are Very Good in Bangalore.
+
+
+
+	CITY VS (FINAL_PRICE & ORIGINAL_PRICE)
+
+		- Mumbai has the highest Final_price and Original_price.
+
+		- Capital O 22737 Chandra Grand Hotel is the most expensive hotel in Hyderabad
+		- SPOT ON 65122 K - inn SPOT, SPOT ON 45127 Thirumala Lodge SPOT and SPOT ON 48349 Sri Sai Lohith Lodge SPOT are the cheapest hotels in Hyderabad.
+
+		- Palette -Prestige Golfshire Club is the most expensive hotel in Bangalore
+		- SPOT ON 47596 Gayatri Comforts SPOT  is the most cheapest hotel in Bangalore
+
+
+	CITY VS OFFERS
+
+				# Observations
+
+		- Delhi offers the highest offers.
+		- Hyderabad offers an average of 33.5% off
+		- Bangalore offers an average of 34.65% off
+
+
+	CITY VS NUMBER_OF_RATING
+
+
+				### Observation
+
+		- Hyderabad has the highest number of ratings.
+		- Number of Ratings for hotels in hyderabad are at a mean of 839.73
+		- Number of Ratings for hotels in bangalore are at a mean of 610.29
+
+
+
+	CITY VS RATING
+
+			### Observation
+
+		- From the bar graph it can be infered that mean of the ratings of hotels is the highest in INDIA.
+		- In Hyderabad, OYO 14501 Hotel Hill View Guest House Begumpet is the highest rated hotel.
+		- In Bangalore, OYO 19285 Uv Comforts, Palette - Npg Hotel, OYO 29020 Vm Comfort and OYO 24130 Surya Comforts are rated the highest.
+
+
+	CITY VS DISTANCE
+
+
+				### Observation
+
+		- Least distance from the location can be observed in the data from Chennai.
+
+		- In Bangalore, Hotels with maximum distance from the specified location are Capital O 49358 Blue Meridian Inn and OYO 40115 J P Palace.
+
+		- In Bangalore, Hotels with minimum distance from the specified location are OYO 13594 Mathrushree Residency and  OYO 47451 Elegant Indira Nagar
+
+		- In Hyderabad, Hotels with maximum distance from the speccified location are in the locations of Shamshabad, LB Nagar and a couple in Rajiv Gandhi International Airport.
+
+		- In Hyderabad, Hotels with minimum distance from the specified location are OYO 47332 Hotel Dolphin, OYO 9303 Celebrity Skyhy Rooms, OYO 14731 Hallmark Inn Kukatpally and OYO 2840 Kanha Grand.
+
+
+
+MULTIVARIATE ANALYSIS:
+
+
+	HYDERABAD:
+
+
+		BANJARA HILLS:
+			FABULOUS:
+				OYO 14501 Hotel Hill View Guest House Begumpet
+
+			EXCELLENT:
+				LEAST FINAL PRICE:
+					OYO 49253 Raja Residency
+				HIGHEST NUMBER OF RATING:
+					OYO Flagship 15391 Mehdipatnam
+				LEAST DISTANCE:
+					OYO 14224 Happy Guest house
+
+
+				RATING = 4.8:
+					LEAST FINAL PRICE:
+						Capital O 46832 Gaayatri Residency Deluxe
+					HIGHEST NUMBER OF RATING:
+						Capital O 9003 Deccan Inn Deluxe
+					LEAST DISTANCE:
+						Capital O 45597 Hotel Riya Grand Deluxe	
+
+			VERY GOOD:
+				LEAST FINAL PRICE:
+					OYO 44275 Three Castles Executive
+				HIGHEST NUMBER OF RATING:
+					OYO Townhouse 064 Secunderabad
+				LEAST DISTANCE:
+					Capital O 44354 Jubilee Banjara Suites	
+
+
+
+
+		JUBILEE HILLS:
+			EXCELLENT:
+				LEAST FINAL PRICE
+					SPOT ON 37214 Classic Lodge SPOT
+				HIGHEST NUMBER OF RATING:
+					OYO 41729 Elite Stay JNTU Kukatpally
+				LEAST DISTANCE:
+					Capital O 6422 Luxor Park
+
+				RATING = 4.8
+					LEAST FINAL PRICE
+						SPOT ON 37214 Classic Lodge SPOT
+					HIGHEST NUMBER OF RATING:
+						SPOT ON 37214 Classic Lodge SPOT	
+					LEAST DISTANCE:
+						Capital O 9003 Deccan Inn Deluxe	
+
+			VERY GOOD:
+				LEAST FINAL PRICE
+					OYO 44275 Three Castles Executive
+				HIGHEST NUMBER OF RATING:
+					OYO Townhouse 064 Secunderabad	
+				LEAST DISTANCE:
+					OYO 47332 Hotel Dolphin	
+
+
+
+
+
+
+
+
+
+		KONDAPUR:
+			EXCELLENT:
+				LEAST FINAL PRICE
+					OYO 22445 Lakshmi Residency
+				HIGHEST NUMBER OF RATING:
+					OYO 41729 Elite Stay JNTU Kukatpally
+				LEAST DISTANCE:
+					OYO 44149 Globextra
+
+				RATING = 4.8
+					LEAST FINAL PRICE
+						Capital O 9003 Deccan Inn Deluxe
+					HIGHEST NUMBER OF RATING:
+						Capital O 9003 Deccan Inn Deluxe
+					LEAST DISTANCE:
+						Capital O 9003 Deccan Inn Deluxe
+
+			VERY GOOD:
+				LEAST FINAL PRICE
+					OYO 22425 Hotel Honey Cruise	
+				HIGHEST NUMBER OF RATING:
+					Capital O 12384 Hotel Serene Majestic Deluxe
+				LEAST DISTANCE:
+					Capital O 61839 Scrummys Kondapur Deluxe	
+
+
+
+
+
+
+
+
+
+		HITECH CITY:
+			EXCELLENT:
+				LEAST FINAL PRICE
+					OYO 22445 Lakshmi Residency
+				HIGHEST NUMBER OF RATING:
+					OYO 41729 Elite Stay JNTU Kukatpally	
+				LEAST DISTANCE:
+					Collection O 44177 Patrika Nagar
+
+				RATING = 4.8
+					LEAST FINAL PRICE
+						Capital O 9003 Deccan Inn Deluxe
+					HIGHEST NUMBER OF RATING:
+						Capital O 9003 Deccan Inn Deluxe
+					LEAST DISTANCE:
+						Capital O 9003 Deccan Inn Deluxe
+
+			VERY GOOD:
+				LEAST FINAL PRICE
+					OYO 22425 Hotel Honey Cruise	
+				HIGHEST NUMBER OF RATING:
+					Capital O 37516 Apple Tree Inn	
+				LEAST DISTANCE:
+					OYO 62254 Premium Stay Hitech City	
+
+
+
+
+
+
+
+
+
+		BEGUMPET:
+			FABULOUS:
+				OYO 14501 Hotel Hill View Guest House Begumpet	
+
+			EXCELLENT:
+				LEAST FINAL PRICE
+					OYO 49253 Raja Residency	
+				HIGHEST NUMBER OF RATING:
+					OYO Flagship 15391 Mehdipatnam	
+				LEAST DISTANCE:
+					OYO 18454 Hallmark Inn Begumpet
+
+				RATING = 4.8
+					LEAST FINAL PRICE
+						Capital O 45597 Hotel Riya Grand Deluxe
+					HIGHEST NUMBER OF RATING:
+						Capital O 45597 Hotel Riya Grand Deluxe
+					LEAST DISTANCE:
+						Capital O 45597 Hotel Riya Grand Deluxe
+
+			VERY GOOD:
+				LEAST FINAL PRICE
+					OYO 44275 Three Castles Executive
+				HIGHEST NUMBER OF RATING:
+					OYO Townhouse 064 Secunderabad
+				LEAST DISTANCE:
+					OYO Townhouse 064 Secunderabad
+
+
+
+
+
+
+
+
+
+		MEHDIPATNAM:
+			EXCELLENT:
+				LEAST FINAL PRICE
+					SPOT ON 37214 Classic Lodge SPOT
+				HIGHEST NUMBER OF RATING:
+					OYO Flagship 15391 Mehdipatnam
+				LEAST DISTANCE:
+					OYO Flagship 15391 Mehdipatnam
+
+				RATING = 4.8
+					LEAST FINAL PRICE
+						SPOT ON 37214 Classic Lodge SPOT	
+					HIGHEST NUMBER OF RATING:
+						SPOT ON 37214 Classic Lodge SPOT	
+					LEAST DISTANCE:
+						Capital O 45597 Hotel Riya Grand Deluxe
+
+			VERY GOOD:
+				LEAST FINAL PRICE
+					OYO 44275 Three Castles Executive
+				HIGHEST NUMBER OF RATING:
+					OYO Townhouse 064 Secunderabad
+				LEAST DISTANCE:
+					OYO 44275 Three Castles Executive
+
+
+
+
+
+
+
+
+
+		KACHIGUDA RAILWAY STATION:
+			EXCELLENT:
+				LEAST FINAL PRICE
+					SPOT ON 37214 Classic Lodge SPOT
+				HIGHEST NUMBER OF RATING:
+					OYO Flagship 15391 Mehdipatnam	
+				LEAST DISTANCE:
+					OYO 18926 Tourist Krishna Inn	
+
+				RATING = 4.8
+					LEAST FINAL PRICE
+						SPOT ON 37214 Classic Lodge SPOT
+					HIGHEST NUMBER OF RATING:
+						SPOT ON 37214 Classic Lodge SPOT
+					LEAST DISTANCE:
+						SPOT ON 37214 Classic Lodge SPOT
+
+			VERY GOOD:
+				LEAST FINAL PRICE
+					OYO 44275 Three Castles Executive
+				HIGHEST NUMBER OF RATING:
+					OYO Flagship 16073 Kothapet Ramoji
+				LEAST DISTANCE:
+					OYO 16539 Grand Sandarshini Inn
+
+
+
+
+
+
+
+
+
+
+		SECUNDERABAD RAILWAY STATION:
+			FABULOUS:
+				OYO 14501 Hotel Hill View Guest House Begumpet
+
+			EXCELLENT:
+				LEAST FINAL PRICE
+					OYO 49253 Raja Residency
+				HIGHEST NUMBER OF RATING:
+					OYO Flagship 15391 Mehdipatnam	
+				LEAST DISTANCE:
+					Capital O 23543 Hotel Vaishnavi
+
+				RATING = 4.8
+					LEAST FINAL PRICE
+						Capital O 46832 Gaayatri Residency Deluxe
+					HIGHEST NUMBER OF RATING:
+						Capital O 45597 Hotel Riya Grand Deluxe
+					LEAST DISTANCE:
+						Capital O 45597 Hotel Riya Grand Deluxe
+
+			VERY GOOD:
+				LEAST FINAL PRICE
+					OYO 44275 Three Castles Executive
+				HIGHEST NUMBER OF RATING:
+					OYO Townhouse 064 Secunderabad
+				LEAST DISTANCE:
+					OYO Townhouse 064 Secunderabad
+
+
+
+
+
+
+
+
+
+		JUBILEE HILLS:
+			EXCELLENT:
+				LEAST FINAL PRICE
+
+				HIGHEST NUMBER OF RATING:
+
+				LEAST DISTANCE:
+
+
+				RATING = 4.8
+					LEAST FINAL PRICE
+
+					HIGHEST NUMBER OF RATING:
+
+					LEAST DISTANCE:
+
+
+			VERY GOOD:
+				LEAST FINAL PRICE
+
+				HIGHEST NUMBER OF RATING:
+
+				LEAST DISTANCE:
+
+
+
+
+
+
+
+
+
+
+		JUBILEE HILLS:
+			EXCELLENT:
+				LEAST FINAL PRICE
+
+				HIGHEST NUMBER OF RATING:
+
+				LEAST DISTANCE:
+
+
+				RATING = 4.8
+					LEAST FINAL PRICE
+
+					HIGHEST NUMBER OF RATING:
+
+					LEAST DISTANCE:
+
+
+			VERY GOOD:
+				LEAST FINAL PRICE
+
+				HIGHEST NUMBER OF RATING:
+
+				LEAST DISTANCE:
+
+
+
+
+
+
+
+
+
+
+		JUBILEE HILLS:
+			EXCELLENT:
+				LEAST FINAL PRICE
+
+				HIGHEST NUMBER OF RATING:
+
+				LEAST DISTANCE:
+
+
+				RATING = 4.8
+					LEAST FINAL PRICE
+
+					HIGHEST NUMBER OF RATING:
+
+					LEAST DISTANCE:
+
+
+			VERY GOOD:
+				LEAST FINAL PRICE
+
+				HIGHEST NUMBER OF RATING:
+
+				LEAST DISTANCE:
+
+
+
+
+
+
+
+
+
+
+		JUBILEE HILLS:
+			EXCELLENT:
+				LEAST FINAL PRICE
+
+				HIGHEST NUMBER OF RATING:
+
+				LEAST DISTANCE:
+
+
+				RATING = 4.8
+					LEAST FINAL PRICE
+
+					HIGHEST NUMBER OF RATING:
+
+					LEAST DISTANCE:
+
+
+			VERY GOOD:
+				LEAST FINAL PRICE
+
+				HIGHEST NUMBER OF RATING:
+
+				LEAST DISTANCE:
+
+
+
+
+
+
+
+
+
+
+		JUBILEE HILLS:
+			EXCELLENT:
+				LEAST FINAL PRICE
+
+				HIGHEST NUMBER OF RATING:
+
+				LEAST DISTANCE:
+
+
+				RATING = 4.8
+					LEAST FINAL PRICE
+
+					HIGHEST NUMBER OF RATING:
+
+					LEAST DISTANCE:
+
+
+			VERY GOOD:
+				LEAST FINAL PRICE
+
+				HIGHEST NUMBER OF RATING:
+
+				LEAST DISTANCE:
+
+
+
+
+
+
+
+
+
+
+		JUBILEE HILLS:
+			EXCELLENT:
+				LEAST FINAL PRICE
+
+				HIGHEST NUMBER OF RATING:
+
+				LEAST DISTANCE:
+
+
+				RATING = 4.8
+					LEAST FINAL PRICE
+
+					HIGHEST NUMBER OF RATING:
+
+					LEAST DISTANCE:
+
+
+			VERY GOOD:
+				LEAST FINAL PRICE
+
+				HIGHEST NUMBER OF RATING:
+
+				LEAST DISTANCE:
+
+
+
+
+
+
+
+
+
+
+		JUBILEE HILLS:
+			EXCELLENT:
+				LEAST FINAL PRICE
+
+				HIGHEST NUMBER OF RATING:
+
+				LEAST DISTANCE:
+
+
+				RATING = 4.8
+					LEAST FINAL PRICE
+
+					HIGHEST NUMBER OF RATING:
+
+					LEAST DISTANCE:
+
+
+			VERY GOOD:
+				LEAST FINAL PRICE
+
+				HIGHEST NUMBER OF RATING:
+
+				LEAST DISTANCE:
+
+
+
+
+
+
